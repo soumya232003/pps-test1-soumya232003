@@ -1,2 +1,6 @@
-language = "undefined"
-run = ""
+#include<stdio.h>
+int main()
+{
+printf("my name is soumya\n");
+return 0;
+}

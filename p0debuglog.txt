@@ -1,1 +1,5 @@
- 
+unable to read .replit:
+unable to decode .replit: Near line 2 (last key parsed 'int'): expected key separator '=', but got 'm' instead
+ gcc -g p0original.c
+ ./a.out
+my name is Soumya/n 
