@@ -1,0 +1,94 @@
+gcc -g p0original.c
+ 
+ gcc -g p1original.c
+ ./a.out
+enter the value of a and b: 
+5
+6
+the sum : 11 
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x772: file p1original.c, line 3.
+(gdb) r
+Starting program: /home/runner/pps-test1-soumya232003-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p1original.c:3
+3   {
+(gdb) n
+5   printf("enter the value of a and b: \n");
+(gdb) n
+enter the value of a and b: 
+6   scanf("%d%d",&a,&b);
+(gdb) n
+n
+7   sum=a+b;
+(gdb) n
+8   printf("the sum : %d",sum);
+(gdb) n
+9   return 0;
+(gdb) n
+10  }
+(gdb) b main
+Note: breakpoint 1 also set at pc 0x55c981800772.
+Breakpoint 2 at 0x55c981800772: file p1original.c, line 3.
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: /home/runner/pps-test1-soumya232003-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p1original.c:3
+3   {
+(gdb) n
+5   printf("enter the value of a and b: \n");
+(gdb) n
+enter the value of a and b: 
+6   scanf("%d%d",&a,&b);
+(gdb) n
+5
+6
+7   sum=a+b;
+(gdb) p a
+$1 = 5
+(gdb) p b
+$2 = 6
+(gdb) p sum
+$3 = 32765
+(gdb) n
+8   printf("the sum : %d",sum);
+(gdb) p sum
+$4 = 11
+(gdb) n
+9   return 0;
+(gdb) n
+10  }
+(gdb) n
+__libc_start_main (main=0x56284d40076a <main>, argc=1, argv=0x7ffd903a70a8, 
+    init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, 
+    stack_end=0x7ffd903a7098) at ../csu/libc-start.c:344
+344 ../csu/libc-start.c: No such file or directory.
+(gdb) c
+Continuing.
+the sum : 11[Inferior 1 (process 466) exited normally]
+(gdb) c
+The program is not being run.
+(gdb) b main
+Note: breakpoints 1 and 2 also set at pc 0x56284d400772.
+Breakpoint 3 at 0x56284d400772: file p1original.c, line 3.
+(gdb) 
