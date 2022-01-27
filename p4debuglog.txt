@@ -1,0 +1,171 @@
+ gcc -g p3original.c
+ ./a.out
+enter the value of a and b
+4 5
+sum of 4+5=9
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+ 
+ gcc -g p4original.c
+ ./a.out
+enter the value 
+4 5 6
+enter the value 
+enter the value 
+6 is large 4 5
+bash: 4: command not found
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+ 
+ gcc -g p4original.c
+ ./a.out
+enter the value 
+4 6 3
+enter the value 
+enter the value 
+6 is large 
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x802: file p4original.c, line 27.
+(gdb) r
+Starting program: /home/runner/pps-test1-soumya232003-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p4original.c:27
+27    a=input();
+(gdb) n
+enter the value 
+4 2 7 
+28    b=input();
+(gdb) n
+enter the value 
+29    c=input();
+(gdb) p a
+$1 = 4
+(gdb) n
+enter the value 
+30    large=cmp(a,b,c);
+(gdb) p b
+$2 = 2
+(gdb) n
+31    printf("%d is large",large);
+(gdb) p c
+$3 = 7
+(gdb) s
+__printf (format=0x5637d2c008f8 "%d is large") at printf.c:28
+28  printf.c: No such file or directory.
+(gdb) n
+32  in printf.c
+(gdb) n
+33  in printf.c
+(gdb) n
+32  in printf.c
+(gdb) q
+A debugging session is active.
+
+    Inferior 1 [process 486] will be killed.
+
+Quit anyway? (y or n) y
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+ 
+ gcc -g p4original.c
+ ./a.out
+enter the value 
+4 7 6
+enter the value 
+enter the value 
+7 is large 
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x802: file p4original.c, line 27.
+(gdb) r
+Starting program: /home/runner/pps-test1-soumya232003-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p4original.c:27
+27    a=input();
+(gdb) n
+enter the value 
+4 7 8
+28    b=input();
+(gdb) n
+enter the value 
+29    c=input();
+(gdb) n
+enter the value 
+30    large=cmp(a,b,c);
+(gdb) n
+31    printf("%d is large",large);
+(gdb) p large
+$1 = 8
+(gdb) n
+32    return 0;
+(gdb) n
+33  }(gdb) q
+A debugging session is active.
+
+    Inferior 1 [process 543] will be killed.
+
+Quit anyway? (y or n) y
+ 
