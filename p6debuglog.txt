@@ -1,0 +1,149 @@
+gcc -g p6original.c
+ ./a.out
+ enter the number
+5
+1+
+2+
+3+
+4+
+5 is 10
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x772: file p6original.c, line 3.
+(gdb) r
+Starting program: /home/runner/pps-test1-soumya232003-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p6original.c:3
+3   {
+(gdb) n
+4     int i, n, sum=0;
+(gdb) n
+6     printf(" enter the number\n");
+(gdb) n
+ enter the number
+7     scanf("%d" , &n);
+(gdb) n
+5
+9     for(i=1; i<n; i++)
+(gdb) n
+11      sum= sum + i;
+(gdb) p i
+$1 = 1
+(gdb) n
+9     for(i=1; i<n; i++)
+(gdb) p sum
+$2 = 1
+(gdb) n
+11      sum= sum + i;
+(gdb) p i
+$3 = 2
+(gdb) n
+ 
+ gcc -g p6original.c
+ ./a.out
+ enter the number
+7
+1+
+2+
+3+
+4+
+5+
+6+
+7 is 21
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x772: file p6original.c, line 3.
+(gdb) r
+Starting program: /home/runner/pps-test1-soumya232003-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p6original.c:3
+3   {
+(gdb) n
+4     int i, n, sum=0;
+(gdb) n
+6     printf(" enter the number\n");
+(gdb) n
+ enter the number
+7     scanf("%d" , &n);
+(gdb) n
+3
+9     for(i=1; i<n; i++)
+(gdb) p i
+$1 = -428287520
+(gdb) n
+11      sum= sum + i;
+(gdb) p i
+$2 = 1
+(gdb) n
+9     for(i=1; i<n; i++)
+(gdb) p sum
+$3 = 1
+(gdb) n
+11      sum= sum + i;
+(gdb) p i
+$4 = 2
+(gdb) n
+9     for(i=1; i<n; i++)
+(gdb) p sum
+$5 = 3
+(gdb) n
+14    for(i=1; i<n; i++)
+(gdb) p i
+$6 = 3
+(gdb) n
+16      printf("%d+\n",i);
+(gdb) p sum
+$7 = 3
+(gdb) n
+1+
+14    for(i=1; i<n; i++)
+(gdb) n
+16      printf("%d+\n",i);
+(gdb) n
+2+
+14    for(i=1; i<n; i++)
+(gdb) n
+18    printf("%d is %d\n" ,i, sum);
+(gdb) n
+3 is 3
+19    return 0;
+(gdb) n
+20  }(gdb) q
+A debugging session is active.
+
+    Inferior 1 [process 296] will be killed.
+
+Quit anyway? (y or n) y
+ 
